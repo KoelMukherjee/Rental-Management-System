@@ -1,0 +1,8 @@
+<div>Equipment Catalog</div>
+<ng-container class="flex-container" *ngIf="equipmentsLength !=0; else noResultFound">
+    <div class="equipmentList" *ngFor="let equipment of equipments">
+        <img src="../../assets/images/category/{{equipment.image}}" alt= {{equipment.name}}/>
+        <div (click)="subCategories(equipment)">{{equipment.name}}<em class="fa fa-caret-right"></em></div>
+    </div>
+</ng-container>
+<ng-template #noResultFound><h4 class="noResultFound">No Result Found. Please select some bother Country/Branch</h4></ng-template>

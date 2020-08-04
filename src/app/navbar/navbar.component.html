@@ -1,0 +1,17 @@
+<nav class="app-title">
+    <label>RENTAL MANAGEMENT SYSTEM</label>
+     <div class="dropdown">
+        <label (click)="showCountries()">Select Option</label><em class="fa fa-caret-down"></em>
+        <div *ngIf="showCountry">
+          <ul class="dropdown-content" *ngFor="let country of dropdownOptions">
+            <li ><a id="{{country.name}}" (click)="showBranches(country)" >{{country.name}}</a>
+            </li>
+          </ul>
+          <div class="dropdown-content-submenu"  *ngIf="showBranch">
+            <ul *ngFor="let branch of selectedCountry.branches">
+               <li ><a (click)="showCategory(branch)">{{branch.name}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>  
+</nav>

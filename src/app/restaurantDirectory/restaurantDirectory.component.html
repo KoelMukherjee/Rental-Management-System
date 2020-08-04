@@ -2,9 +2,9 @@
 <div class="layout-column align-items-center mt-50">
 
   <section class="layout-row align-items-center justify-content-center">
-    <input type="text" class="large" placeholder="Restaurant Name" data-test-id="restaurant-name-input"/>
-    <input type="text" class="large" placeholder="City Name" data-test-id="city-name-input"/>
-    <button data-test-id="submit-button">Submit</button>
+    <input type="text" class="large" placeholder="Restaurant Name" data-test-id="restaurant-name-input" [(ngModel)]="resturantName" />
+    <input type="text" class="large" placeholder="City Name" data-test-id="city-name-input" [(ngModel)]="cityName"/>
+    <button data-test-id="submit-button" (click)="resturantDetails()">Submit</button>
   </section>
 
   <div class="card w-30 mt-30 pb-8">
@@ -15,10 +15,10 @@
         <th>City</th>
       </tr>
       </thead>
-      <tbody data-test-id="restaurant-list">
+      <tbody data-test-id="restaurant-list"  *ngFor="let resturant of resturantList">
       <tr>
-        <th>Name</th>
-        <th>City</th>
+        <th>{{resturant.name}}</th>
+        <th>{{resturant.city}}</th>
       </tr>
       </tbody>
     </table>

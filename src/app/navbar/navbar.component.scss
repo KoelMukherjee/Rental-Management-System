@@ -1,0 +1,44 @@
+.app-title {
+    background-color: black;
+    height: 50px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    label {
+        color: white;
+        padding: 10px 0px 0px 30px;
+       
+    }
+    em {
+        color: white;
+        padding-left: 8px;
+    }
+}
+li {
+    list-style-type: none;
+}
+.dropdown {
+    position: absolute;
+    right: 300px;
+    top: 10px;
+}
+.dropdown-content,
+.dropdown-content-submenu {
+    z-index: 1;
+    background-color: white;
+    width: 150px;
+    padding: 0px;
+        ul {
+            padding: 0px;
+        }
+        a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+}
+
+.dropdown-content-submenu {
+        position: absolute;
+        top: 25px;
+        left: 100%;
+}
